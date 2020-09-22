@@ -1,11 +1,11 @@
 import React from "react";
-import HeaderLoggedOut from "./HeaderLoggedOut/HeaderLoggedOut";
+import HeaderLoggedIn from "./HeaderLoggedIn/HeaderLoggedIn";
 
 export default function Header(props) {
   return (
     <header>
       <h1>Product catalog</h1>
-      <HeaderLoggedOut />
+      <HeaderLoggedIn />
     </header>
   );
 }

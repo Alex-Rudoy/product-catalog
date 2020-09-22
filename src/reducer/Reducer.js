@@ -8,6 +8,14 @@ export function Reducer(draft, action) {
       draft.isRegisterModalOpen = true;
       draft.isLoginModalOpen = false;
       return;
+    case "toggleSettingsPopup":
+      draft.isSettingsPopupOpen = !draft.isSettingsPopupOpen;
+      return;
+    case "closeAllModals":
+      draft.isRegisterModalOpen = false;
+      draft.isLoginModalOpen = false;
+      draft.isSettingsPopupOpen = false;
+      return;
     default:
       return;
   }
