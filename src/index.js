@@ -16,7 +16,10 @@ import * as serviceWorker from "./serviceWorker";
 Axios.defaults.baseURL = "http://smktesting.herokuapp.com/api/";
 
 function Main() {
-  const initialState = {};
+  const initialState = {
+    isLoginModalOpen: false,
+    isRegisterModalOpen: false,
+  };
 
   const [state, dispatch] = useImmerReducer(Reducer, initialState);
 
