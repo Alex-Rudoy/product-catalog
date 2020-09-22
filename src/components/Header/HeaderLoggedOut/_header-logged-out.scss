@@ -1,0 +1,28 @@
+.header {
+  &__login,
+  &__register {
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__login {
+    background-color: #fdc500;
+    border: none;
+    margin-right: 16px;
+    color: #00296b;
+  }
+
+  &__register {
+    background-color: #00296b;
+    border: 2px solid #fdc500;
+    color: #fdc500;
+  }
+}

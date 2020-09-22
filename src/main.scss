@@ -3,6 +3,8 @@
 @import "./components/Header/header";
 @import "./components/Page/page";
 @import "./components/Page/Home/home";
+@import "./components/Header/HeaderLoggedIn/header-logged-in";
+@import "./components/Header/HeaderLoggedOut/header-logged-out";
 
 * {
   margin: 0px;
