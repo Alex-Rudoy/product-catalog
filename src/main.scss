@@ -1,0 +1,29 @@
+@import "./components/LoadingIcon/loading-icon";
+@import "./components/Footer/footer";
+@import "./components/Header/header";
+@import "./components/Page/page";
+@import "./components/Page/Home/home";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
