@@ -2,6 +2,7 @@
 
 main {
   margin-top: 75px;
+  flex: 1;
 
   @include atMedium {
     margin-right: auto;
