@@ -26,6 +26,7 @@ export default function Promo(props) {
       for (let i = 0; i < 3; i++) draft.promo.push(promo[i]);
       draft.isLoading = false;
     });
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
