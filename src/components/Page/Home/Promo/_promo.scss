@@ -6,6 +6,16 @@
   align-items: center;
   margin: 24px 0;
 
+  @include atMedium {
+    margin-right: auto;
+    margin-left: auto;
+    width: 750px;
+  }
+
+  @include atLarge {
+    width: 1120px;
+  }
+
   &__slide {
     width: 1120px;
     height: 500px;

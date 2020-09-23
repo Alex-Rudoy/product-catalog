@@ -42,9 +42,12 @@ export default function Home() {
     <Page title="Homepage">
       <Promo />
       <section className="category-items">
-        {state.categories.map((category) => (
-          <CategoryItems data={category} key={category.title} />
-        ))}
+        <div className="category-items__wrapper">
+          <h1>Our most popular categories</h1>
+          {state.categories.map((category) => (
+            <CategoryItems data={category} key={category.title} />
+          ))}
+        </div>
       </section>
     </Page>
   );
