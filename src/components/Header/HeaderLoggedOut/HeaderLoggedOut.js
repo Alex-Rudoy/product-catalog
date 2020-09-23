@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import DispatchContext from "../../../reducer/DispatchContext";
 
-export default function HeaderLoggedOut(props) {
+export default function HeaderLoggedOut() {
   const appDispatch = useContext(DispatchContext);
 
   function showLoginModal() {

@@ -6,7 +6,7 @@ import instagram from "./images/instagram.png";
 import twitter from "./images/twitter.png";
 import youtube from "./images/youtube.png";
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer__links">

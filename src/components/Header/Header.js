@@ -3,7 +3,7 @@ import StateContext from "../../reducer/StateContext";
 import HeaderLoggedIn from "./HeaderLoggedIn/HeaderLoggedIn";
 import HeaderLoggedOut from "./HeaderLoggedOut/HeaderLoggedOut";
 
-export default function Header(props) {
+export default function Header() {
   const appState = useContext(StateContext);
 
   return (
