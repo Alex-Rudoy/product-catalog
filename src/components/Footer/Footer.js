@@ -15,7 +15,7 @@ export default function Footer(props) {
           <img src={googlePlay} alt="Google Play" />
           <img src={appStore} alt="AppStore" />
         </div>
-        <p className="footer__title">Follow us in social networks</p>
+        <p className="footer__title">Follow us in social networks:</p>
         <div className="footer__image-holder">
           <img src={facebook} alt="Facebook" />
           <img src={twitter} alt="Twitter" />
