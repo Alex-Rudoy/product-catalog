@@ -1,0 +1,42 @@
+@import "../../mixins";
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $primary;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  flex-direction: row-reverse;
+
+  &__image-holder {
+    display: flex;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0px 32px;
+  }
+
+  & img {
+    cursor: pointer;
+    filter: grayscale(0.7);
+    transition: filter 0.3s;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
