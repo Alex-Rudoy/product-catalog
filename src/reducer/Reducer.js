@@ -16,6 +16,9 @@ export function Reducer(draft, action) {
       draft.isLoginModalOpen = false;
       draft.isSettingsPopupOpen = false;
       return;
+    case "logout":
+      draft.loggedIn = false;
+      return;
     default:
       return;
   }
