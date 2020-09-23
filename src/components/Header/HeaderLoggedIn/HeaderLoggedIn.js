@@ -12,7 +12,6 @@ export default function HeaderLoggedIn(props) {
   }
 
   function toggleSettingsPopup() {
-    console.log("ololo");
     appDispatch({ type: "toggleSettingsPopup" });
   }
 

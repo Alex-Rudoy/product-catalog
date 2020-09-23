@@ -4,8 +4,8 @@ import Promo from "./Promo/Promo";
 
 export default function Home(props) {
   return (
-    <Page>
-      <Promo></Promo>
+    <Page title="Homepage">
+      <Promo />
     </Page>
   );
 }
