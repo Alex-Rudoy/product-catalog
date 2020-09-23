@@ -16,15 +16,30 @@ import * as serviceWorker from "./serviceWorker";
 Axios.defaults.baseURL = "http://smktesting.herokuapp.com/api/";
 
 function Main() {
-  const initialState = {};
+  const initialState = {
+    loggedIn: Boolean(localStorage.getItem("token")),
+    user: {
+      // todo - remove test data
+      token: localStorage.getItem("token") || 123,
+      username: localStorage.getItem("username") || "John Smith",
+    },
+    isLoginModalOpen: false,
+    isRegisterModalOpen: false,
+    isSettingsPopupOpen: false,
+  };
 
   const [state, dispatch] = useImmerReducer(Reducer, initialState);
+
+  function closeAllModals() {
+    if (state.isLoginModalOpen || state.isRegisterModalOpen || state.isSettingsPopupOpen)
+      dispatch({ type: "closeAllModals" });
+  }
 
   return (
     <React.StrictMode>
       <StateContext.Provider value={state}>
         <DispatchContext.Provider value={dispatch}>
-          <div className="wrapper">
+          <div className="wrapper" onClick={closeAllModals}>
             <BrowserRouter>
               <Header />
               <Suspense fallback={<LoadingIcon />}>

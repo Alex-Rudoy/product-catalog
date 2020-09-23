@@ -1,0 +1,59 @@
+@import "../../../mixins";
+
+.header {
+  &__left-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__username {
+    color: white;
+    font-weight: 700;
+  }
+
+  &__avatar {
+    margin: 0 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__arrow {
+    box-sizing: initial;
+    border-top: 12px solid white;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+  }
+
+  &__popup {
+    position: absolute;
+    top: 70px;
+    right: 16px;
+    background-color: $primary;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+
+    &--visible {
+      opacity: 1;
+    }
+  }
+
+  &__logout {
+    color: white;
+    cursor: pointer;
+    padding: 16px;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
