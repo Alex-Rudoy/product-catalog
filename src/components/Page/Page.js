@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-function Page({ title, children }) {
+export default function Page({ title, children }) {
   useEffect(() => {
     document.title = `${title}`;
     window.scrollTo(0, 0);
@@ -8,5 +8,3 @@ function Page({ title, children }) {
 
   return <main>{children}</main>;
 }
-
-export default Page;

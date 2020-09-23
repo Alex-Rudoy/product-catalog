@@ -1,0 +1,30 @@
+.promo {
+  &__nav {
+    width: 336px;
+    height: 20px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+  }
+
+  &__slider-step {
+    width: 30px;
+    height: 30px;
+
+    & div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #b4d2fb;
+      margin: 5px 5px;
+    }
+
+    &:hover div {
+      background-color: #458ff6;
+    }
+
+    &--active div {
+      background-color: #458ff6;
+    }
+  }
+}
