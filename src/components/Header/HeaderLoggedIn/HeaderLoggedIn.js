@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import avatar from "../../../images/avatar.png";
 import DispatchContext from "../../../reducer/DispatchContext";
 import StateContext from "../../../reducer/StateContext";
+import avatar from "./images/avatar.png";
 
 export default function HeaderLoggedIn(props) {
   const appState = useContext(StateContext);

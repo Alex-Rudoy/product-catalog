@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { useImmer } from "use-immer";
-import promo1 from "../../../../images/promo1.jpg";
-import promo2 from "../../../../images/promo2.jpg";
-import promo3 from "../../../../images/promo3.jpg";
+import promo1 from "./images/promo1.jpg";
+import promo2 from "./images/promo2.jpg";
+import promo3 from "./images/promo3.jpg";
 
 export default function Promo(props) {
   const [slider, setSlider] = useImmer({
