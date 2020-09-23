@@ -1,3 +1,5 @@
+@import "../../../mixins";
+
 .header {
   &__login,
   &__register {
@@ -14,15 +16,15 @@
   }
 
   &__login {
-    background-color: #fdc500;
+    background-color: $secondary;
     border: none;
     margin-right: 16px;
-    color: #00296b;
+    color: $primary;
   }
 
   &__register {
-    background-color: #00296b;
-    border: 2px solid #fdc500;
-    color: #fdc500;
+    background-color: transparent;
+    border: 2px solid $secondary;
+    color: $secondary;
   }
 }
