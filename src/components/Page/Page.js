@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
 
-function Page({ title, children }) {
+export default function Page({ title, children }) {
   useEffect(() => {
-    document.title = `${title}`;
+    document.title = `${title} | Product catalog`;
     window.scrollTo(0, 0);
   }, [title]);
 
   return <main>{children}</main>;
 }
-
-export default Page;

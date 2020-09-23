@@ -20,8 +20,8 @@ function Main() {
     loggedIn: Boolean(localStorage.getItem("token")),
     user: {
       // todo - remove test data
-      token: localStorage.getItem("token") || 123,
-      username: localStorage.getItem("username") || "John Smith",
+      token: localStorage.getItem("token"),
+      username: localStorage.getItem("username"),
     },
     isLoginModalOpen: false,
     isRegisterModalOpen: false,

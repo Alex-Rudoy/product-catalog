@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import avatar from "../../../images/avatar.png";
 import DispatchContext from "../../../reducer/DispatchContext";
 import StateContext from "../../../reducer/StateContext";
+import avatar from "./images/avatar.png";
 
-export default function HeaderLoggedIn(props) {
+export default function HeaderLoggedIn() {
   const appState = useContext(StateContext);
   const appDispatch = useContext(DispatchContext);
 
@@ -12,7 +12,6 @@ export default function HeaderLoggedIn(props) {
   }
 
   function toggleSettingsPopup() {
-    console.log("ololo");
     appDispatch({ type: "toggleSettingsPopup" });
   }
 
