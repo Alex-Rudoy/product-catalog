@@ -11,13 +11,11 @@
   flex-direction: row-reverse;
 
   &__image-holder {
-    display: flex;
-    align-items: center;
+    @include flexCenter;
   }
 
   &__links {
-    display: flex;
-    align-items: center;
+    @include flexCenter;
   }
 
   &__title {
