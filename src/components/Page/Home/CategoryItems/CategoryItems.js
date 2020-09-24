@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function CategoryItems({ data: { title, products } }) {
-  console.log(products);
   return (
     <div class="category-items__category">
       <h2 className="category-items__title">{title}</h2>
