@@ -1,0 +1,73 @@
+@import "../../../mixins";
+
+.input-container {
+  position: relative;
+  margin-bottom: 40px;
+  width: 100%;
+
+  & label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    transition: all 0.3s ease-out;
+  }
+
+  & input {
+    background-color: transparent;
+    color: $primarydark;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $primarylight;
+    outline: none;
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $primarydark;
+    }
+
+    &:focus + label {
+      top: -18px;
+      left: -7px;
+      transform: scale(0.7);
+    }
+
+    &:valid + label {
+      top: -18px;
+      left: -7px;
+      transform: scale(0.7);
+    }
+  }
+
+  & textarea {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    resize: none;
+    outline: none;
+
+    &:invalid {
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-bottom: 1px solid white;
+    }
+
+    &:focus + label {
+      top: -18px;
+      left: -16px;
+      transform: scale(0.7);
+    }
+
+    &:valid + label {
+      top: -18px;
+      left: -16px;
+      transform: scale(0.7);
+    }
+  }
+}

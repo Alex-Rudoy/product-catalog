@@ -8,6 +8,8 @@
 @import "./components/Page/Home/home";
 @import "./components/Page/Home/Promo/promo";
 @import "./components/Page/Home/CategoryItems/category-items";
+@import "./components/_reusable/Input/input.scss";
+@import "./components/AuthModal/auth-modal.scss";
 
 * {
   margin: 0px;

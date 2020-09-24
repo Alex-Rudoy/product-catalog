@@ -1,0 +1,64 @@
+@import "../../mixins";
+
+.auth-modal {
+  &__blackout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 101;
+    @include flexCenter;
+  }
+
+  width: 300px;
+  height: 450px;
+  background: $secondarylight;
+  border: 2px solid $primarydark;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &__tabs {
+    display: flex;
+  }
+
+  &__tab {
+    width: 50%;
+    height: 50px;
+    border: 2px solid $primarydark;
+    background-color: white;
+    @include flexCenter;
+
+    &--active {
+      border: none;
+      background-color: $secondarylight;
+    }
+  }
+
+  &__container {
+    padding: 32px 16px;
+    @include flexCenter;
+    flex-direction: column;
+    flex: 1;
+
+    & .submit-button {
+      width: 200px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: $primary;
+      color: white;
+      font-weight: bold;
+      @include flexCenter;
+    }
+
+    & .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+}
