@@ -17,8 +17,16 @@ export function Reducer(draft, action) {
     case "closeSettingsPopup":
       draft.isSettingsPopupOpen = false;
       return;
+    case "login":
+      draft.user.username = action.username;
+      draft.user.token = action.token;
+      draft.isAuthModalOpen = false;
+      draft.loggedIn = true;
+      return;
     case "logout":
       draft.loggedIn = false;
+      draft.user.username = "";
+      draft.user.token = "";
       return;
     default:
       return;

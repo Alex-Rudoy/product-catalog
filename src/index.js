@@ -1,5 +1,5 @@
 import Axios from "axios";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useImmerReducer } from "use-immer";
@@ -31,6 +31,12 @@ function Main() {
   };
 
   const [state, dispatch] = useImmerReducer(Reducer, initialState);
+
+  useEffect(() => {
+    localStorage.setItem("token", state.user.token);
+    localStorage.setItem("username", state.user.username);
+    // eslint-disable-next-line
+  }, [state.loggedIn]);
 
   function closeSettingsPopup() {
     if (state.isAuthModalOpen || state.isSettingsPopupOpen) dispatch({ type: "closeSettingsPopup" });
