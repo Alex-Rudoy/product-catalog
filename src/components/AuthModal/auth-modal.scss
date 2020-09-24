@@ -45,5 +45,10 @@
     flex-direction: column;
     flex: 1;
 
+    & form {
+      width: 100%;
+      @include flexCenter;
+      flex-direction: column;
+    }
   }
 }
