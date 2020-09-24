@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { useImmer } from "use-immer";
 import LoadingIcon from "../../LoadingIcon/LoadingIcon";
 import Page from "../Page";
+import ProductDescription from "./ProductDescription/ProductDescription";
+import ProductReviews from "./ProductReviews/ProductReviews";
 
 export default function ProductPage() {
   const [state, setState] = useImmer({
@@ -20,7 +22,6 @@ export default function ProductPage() {
     */
     async function getProductData() {
       let products = await Axios.get("/products/");
-      console.log(`/reviews/${products.data[id - 1].id}/`);
       let reviews = await Axios.get(`/reviews/${products.data[id - 1].id}`);
       setState((draft) => {
         draft.productData = products.data[id - 1];
@@ -39,5 +40,10 @@ export default function ProductPage() {
       </Page>
     );
 
-  return <Page title={state.productData.title}></Page>;
+  return (
+    <Page title={state.productData.title}>
+      <ProductDescription data={state.productData} />
+      <ProductReviews data={state.reviews} />
+    </Page>
+  );
 }

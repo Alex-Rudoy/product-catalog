@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function ProductComments() {
+export default function ProductReviews() {
   return <section></section>;
 }
