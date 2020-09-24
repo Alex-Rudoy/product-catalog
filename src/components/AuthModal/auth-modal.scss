@@ -12,8 +12,8 @@
     @include flexCenter;
   }
 
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 450px;
   background: $secondarylight;
   border: 2px solid $primarydark;
   display: flex;
@@ -27,7 +27,7 @@
   }
 
   &__tab {
-    width: 200px;
+    width: 50%;
     height: 50px;
     border: 2px solid $primarydark;
     background-color: white;
@@ -45,10 +45,20 @@
     flex-direction: column;
     flex: 1;
 
-    & form {
-      width: 100%;
+    & .submit-button {
+      width: 200px;
+      height: 50px;
+      border-radius: 10px;
+      background-color: $primary;
+      color: white;
+      font-weight: bold;
       @include flexCenter;
-      flex-direction: column;
+    }
+
+    & .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 10px;
     }
   }
 }
