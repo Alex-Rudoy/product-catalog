@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
 import Home from "./components/Page/Home/Home";
+import ProductPage from "./components/Page/ProductPage/ProductPage";
 import "./main.scss";
 import DispatchContext from "./reducer/DispatchContext";
 import { Reducer } from "./reducer/Reducer";
@@ -53,6 +54,9 @@ function Main() {
                 <Switch>
                   <Route path="/" exact>
                     <Home />
+                  </Route>
+                  <Route path="/product/:id" exact>
+                    <ProductPage />
                   </Route>
                   {/*fallback route*/}
                   <Route>
