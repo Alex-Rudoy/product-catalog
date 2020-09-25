@@ -2,15 +2,13 @@
 @import "./components/_reusable/Input/input";
 @import "./components/_reusable/Button/button";
 @import "./components/AuthModal/auth-modal";
+@import "./components/AuthModal/AuthModalTab/auth-modal-tab";
 @import "./components/Footer/footer";
 @import "./components/Header/header";
 @import "./components/Header/HeaderLoggedIn/header-logged-in";
 @import "./components/LoadingIcon/loading-icon";
 @import "./components/Page/Home/CategoryItems/category-items";
-@import "./components/Page/Home/home";
-@import "./components/Page/Home/home";
 @import "./components/Page/Home/Promo/promo";
-@import "./components/Page/page";
 @import "./components/Page/ProductPage/ProductDescription/product-description";
 @import "./components/Page/ProductPage/ProductReviews/AddReview/add-review";
 @import "./components/Page/ProductPage/ProductReviews/AddReview/AddReviewStars/add-review-stars";
@@ -18,6 +16,8 @@
 @import "./components/Page/ProductPage/ProductReviews/Review/review";
 @import "./components/Page/ProductPage/ProductReviews/Review/ReviewRating/review-rating";
 @import "./components/Page/ProductPage/ProductReviews/ReviewsAuth/reviews-auth";
+@import "./components/Page/Error404/error404";
+@import "./components/_reusable/ProductCard/product-card";
 
 * {
   margin: 0px;
@@ -36,6 +36,11 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  margin-top: 75px;
+  flex: 1;
 }
 
 a,

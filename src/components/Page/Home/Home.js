@@ -16,11 +16,13 @@ export default function Home() {
     but since we only have 2 uncategorized product, i've hardcoded categories
     it's just one request to get products from back
     */
+    const cancelRequest = Axios.CancelToken.source();
+
     setState((draft) => {
       for (let i = 1; i < 4; i++) draft.categories.push({ title: `Category${i}`, products: [] });
     });
 
-    Axios.get("/products/").then((response) => {
+    Axios.get("/products/", { cancelToken: cancelRequest.token }).then((response) => {
       setState((draft) => {
         for (let i = 0; i < 3; i++) {
           draft.categories[i].products = response.data;
@@ -28,6 +30,10 @@ export default function Home() {
         draft.isLoading = false;
       });
     });
+
+    return () => {
+      cancelRequest.cancel();
+    };
     // eslint-disable-next-line
   }, []);
 

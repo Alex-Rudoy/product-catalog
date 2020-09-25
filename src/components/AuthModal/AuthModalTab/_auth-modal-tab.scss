@@ -1,0 +1,14 @@
+@import "../../../mixins";
+
+.auth-modal-tab {
+  width: 50%;
+  height: 50px;
+  border: 2px solid $primarydark;
+  background-color: white;
+  @include flexCenter;
+
+  &--active {
+    border: none;
+    background-color: $secondarylight;
+  }
+}
