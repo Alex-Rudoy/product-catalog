@@ -26,19 +26,6 @@
     display: flex;
   }
 
-  &__tab {
-    width: 50%;
-    height: 50px;
-    border: 2px solid $primarydark;
-    background-color: white;
-    @include flexCenter;
-
-    &--active {
-      border: none;
-      background-color: $secondarylight;
-    }
-  }
-
   &__container {
     padding: 32px 16px;
     @include flexCenter;
