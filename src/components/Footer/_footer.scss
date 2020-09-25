@@ -26,10 +26,7 @@
     cursor: pointer;
     filter: grayscale(0.7);
     transition: filter 0.3s;
-
-    &:not(:last-child) {
-      margin-right: 16px;
-    }
+    margin-right: 16px;
 
     &:hover {
       filter: grayscale(0);
