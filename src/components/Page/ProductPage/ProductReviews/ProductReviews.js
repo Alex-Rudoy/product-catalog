@@ -12,7 +12,7 @@ export default function ProductReviews({ reviews }) {
       {appState.loggedIn ? <AddReview /> : <ReviewsAuth />}
       {reviews
         .slice()
-        .sort((a, b) => a.id - b.id)
+        .sort((a, b) => b.id - a.id)
         .map((review) => (
           <Review review={review} key={review.id} />
         ))}
