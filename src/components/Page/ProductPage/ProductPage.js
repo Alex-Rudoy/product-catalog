@@ -20,6 +20,8 @@ export default function ProductPage() {
     here should be request to get detailed info about the product
     but we only have endpoint for all products, so i've just took the one that i need
     */
+    const cancelRequest = Axios.CancelToken.source();
+
     async function getProductData() {
       let products = await Axios.get("/products/");
       let reviews = await Axios.get(`/reviews/${products.data[id - 1].id}`);
@@ -30,6 +32,10 @@ export default function ProductPage() {
       });
     }
     getProductData();
+
+    return () => {
+      cancelRequest.cancel();
+    };
     // eslint-disable-next-line
   }, [id]);
 
