@@ -43,7 +43,7 @@ export default function ProductPage() {
   return (
     <Page title={state.productData.title}>
       <ProductDescription productData={state.productData} />
-      <ProductReviews reviews={state.reviews} />
+      <ProductReviews reviews={state.reviews} productId={id} />
     </Page>
   );
 }

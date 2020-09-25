@@ -1,0 +1,23 @@
+@import "../../../../../../mixins";
+
+.add-review-stars {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  & input {
+    display: none;
+  }
+
+  & label {
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  & input:checked + label,
+  & input:checked ~ label {
+    color: $secondary;
+  }
+}

@@ -26,8 +26,8 @@ export default function Input({ type, name, value, label, onChange }) {
         <TextareaAutosize
           minRows="1"
           maxRows="5"
-          name="details"
-          id="details"
+          name={name}
+          id={name}
           spellCheck="false"
           autoComplete="off"
           value={value}
