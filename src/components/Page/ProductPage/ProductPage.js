@@ -33,6 +33,13 @@ export default function ProductPage() {
     // eslint-disable-next-line
   }, [id]);
 
+  // function to add a newly created review
+  function addNewReview(review) {
+    setState((draft) => {
+      draft.reviews.unshift(review);
+    });
+  }
+
   if (state.isLoading)
     return (
       <Page title="Product">
@@ -43,7 +50,7 @@ export default function ProductPage() {
   return (
     <Page title={state.productData.title}>
       <ProductDescription productData={state.productData} />
-      <ProductReviews reviews={state.reviews} productId={id} />
+      <ProductReviews reviews={state.reviews} productId={id} addNewReview={addNewReview} />
     </Page>
   );
 }
