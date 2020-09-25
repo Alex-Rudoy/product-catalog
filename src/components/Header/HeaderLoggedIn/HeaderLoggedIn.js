@@ -16,7 +16,7 @@ export default function HeaderLoggedIn() {
   }
 
   return (
-    <div className="header__left-container" onClick={toggleSettingsPopup}>
+    <div className="header__right-container" onClick={toggleSettingsPopup}>
       <p className="header__username">{appState.user.username}</p>
       <Avatar />
       <div className="header__arrow"></div>

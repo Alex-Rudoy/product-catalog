@@ -1,7 +1,7 @@
 @import "../../../mixins";
 
 .header {
-  &__left-container {
+  &__right-container {
     @include flexCenter;
     cursor: pointer;
   }
