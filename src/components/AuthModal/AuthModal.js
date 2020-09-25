@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import DispatchContext from "../../reducer/DispatchContext";
-import StateContext from "../../reducer/StateContext";
 
 export default function AuthModal({ tab, children }) {
-  const appState = useContext(StateContext);
   const appDispatch = useContext(DispatchContext);
 
   function closeAuthModal(e) {

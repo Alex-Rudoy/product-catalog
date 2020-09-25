@@ -8,8 +8,10 @@ export default function ReviewRating({ rate }) {
 
   return (
     <div className="review-rating">
-      {stars.map((star) => (
-        <i class={`material-icons review-rating__${star ? "orange" : "gray"}`}>star</i>
+      {stars.map((star, index) => (
+        <i className={`material-icons review-rating__${star ? "orange" : "gray"}`} key={index}>
+          star
+        </i>
       ))}
     </div>
   );
