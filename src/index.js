@@ -17,7 +17,7 @@ import { Reducer } from "./reducer/Reducer";
 import StateContext from "./reducer/StateContext";
 import * as serviceWorker from "./serviceWorker";
 
-Axios.defaults.baseURL = "http://smktesting.herokuapp.com/api/";
+Axios.defaults.baseURL = "https://smktesting.herokuapp.com/api/";
 
 function Main() {
   const initialState = {
