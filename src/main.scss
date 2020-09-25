@@ -7,10 +7,7 @@
 @import "./components/Header/HeaderLoggedIn/header-logged-in";
 @import "./components/LoadingIcon/loading-icon";
 @import "./components/Page/Home/CategoryItems/category-items";
-@import "./components/Page/Home/home";
-@import "./components/Page/Home/home";
 @import "./components/Page/Home/Promo/promo";
-@import "./components/Page/page";
 @import "./components/Page/ProductPage/ProductDescription/product-description";
 @import "./components/Page/ProductPage/ProductReviews/AddReview/add-review";
 @import "./components/Page/ProductPage/ProductReviews/AddReview/AddReviewStars/add-review-stars";
@@ -37,6 +34,11 @@ html {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+main {
+  margin-top: 75px;
+  flex: 1;
 }
 
 a,
