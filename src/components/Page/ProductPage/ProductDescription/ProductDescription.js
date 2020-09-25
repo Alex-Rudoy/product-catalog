@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ProductDescription({ data: { id, img, text, title } }) {
+export default function ProductDescription({ productData: { id, img, text, title } }) {
   return (
     <section className="product-description">
       <div className="product-description__image-holder">

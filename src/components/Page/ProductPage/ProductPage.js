@@ -42,8 +42,8 @@ export default function ProductPage() {
 
   return (
     <Page title={state.productData.title}>
-      <ProductDescription data={state.productData} />
-      <ProductReviews data={state.reviews} />
+      <ProductDescription productData={state.productData} />
+      <ProductReviews reviews={state.reviews} />
     </Page>
   );
 }
