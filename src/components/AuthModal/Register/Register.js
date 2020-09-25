@@ -24,7 +24,6 @@ export default function Register() {
 
   function submitHandler() {
     if (state.username === "" || state.password === "") {
-      console.log("ololo");
       setState((draft) => {
         draft.error = true;
         draft.errorMessage = "Username and password can't be empty";
@@ -32,7 +31,6 @@ export default function Register() {
     } else {
       Axios.post("/register/", { username: state.username, password: state.password })
         .then((response) => {
-          console.log(response);
           if (response.data.success) {
             appDispatch({ type: "login", username: state.username, token: response.data.token });
           } else {

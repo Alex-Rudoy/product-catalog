@@ -53,8 +53,6 @@ export default function AddReview({ productId, addNewReview }) {
       .catch((error) => console.log(error));
   }
 
-  console.log(state);
-
   return (
     <div className="add-review">
       <AddReviewStars rate={state.rate} onChange={radioHandler} />

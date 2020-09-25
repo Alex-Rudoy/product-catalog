@@ -25,7 +25,6 @@ export default function Login() {
   function submitHandler() {
     Axios.post("/login/", { username: state.username, password: state.password })
       .then((response) => {
-        console.log(response);
         if (response.data.success) {
           appDispatch({ type: "login", username: state.username, token: response.data.token });
         } else {
