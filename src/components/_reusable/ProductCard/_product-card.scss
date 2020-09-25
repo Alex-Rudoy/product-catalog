@@ -1,0 +1,34 @@
+@import "../../../mixins";
+
+.product-card {
+  width: 200px;
+  height: 245px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 10px;
+  margin-right: 24px;
+  transition: box-shadow 0.3s, transform 0.3s;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 8px 8px 15px;
+    transform: scale(1.1);
+  }
+
+  & h3 {
+    margin-bottom: 10px;
+  }
+
+  &__image-holder {
+    margin: -16px -16px 16px;
+    height: 150px;
+    overflow: hidden;
+    @include flexCenter;
+    border-bottom: 2px solid $primarylight;
+
+    & img {
+      width: 200px;
+    }
+  }
+}

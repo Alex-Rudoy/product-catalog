@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ProductCard from "../../../_reusable/ProductCard/ProductCard";
 
 export default function CategoryItems({ data: { title, products } }) {
   return (
@@ -7,15 +7,7 @@ export default function CategoryItems({ data: { title, products } }) {
       <h2 className="category-items__title">{title}</h2>
       <div className="category-items__list-of-items">
         {products.slice(0, 4).map((product) => (
-          <Link to={`/product/${product.id}`} key={product.id}>
-            <div className="category-items__product">
-              <div className="category-items__image-holder">
-                <img src={`http://smktesting.herokuapp.com/static/${product.img}`} alt={product.img} />
-              </div>
-              <h3>{product.title}</h3>
-              <p>{product.text}</p>
-            </div>
-          </Link>
+          <ProductCard product={product} />
         ))}
         <div className="category-items__view-all">
           <div className="category-items__dots">
