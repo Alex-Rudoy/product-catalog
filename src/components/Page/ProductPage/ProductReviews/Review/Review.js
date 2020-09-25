@@ -1,4 +1,6 @@
 import React from "react";
+import Avatar from "../../../../_reusable/Avatar/Avatar";
+import ReviewRating from "./ReviewRating/ReviewRating";
 
 export default function Review({
   review: {
@@ -8,11 +10,16 @@ export default function Review({
     text,
   },
 }) {
+  let date = new Date(created_at).toLocaleString();
+
   return (
     <div className="review">
-      <p className="review__author">{author}</p>
-      <p className="review__date">{created_at}</p>
-      <p className="review__rate">{rate}</p>
+      <div className="review__top-line">
+        <Avatar />
+        <p className="review__author">{author}</p>
+        <p className="review__date">{date}</p>
+      </div>
+      <ReviewRating rate={rate} />
       <p className="review__text">{text}</p>
     </div>
   );

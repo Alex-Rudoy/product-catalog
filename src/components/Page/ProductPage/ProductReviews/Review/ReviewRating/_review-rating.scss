@@ -1,0 +1,15 @@
+@import "../../../../../../mixins";
+
+.review-rating {
+  margin-bottom: 8px;
+
+  &__orange {
+    color: $secondary;
+    font-size: 18px;
+  }
+
+  &__gray {
+    color: #888;
+    font-size: 18px;
+  }
+}
