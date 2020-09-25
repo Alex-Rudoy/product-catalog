@@ -22,7 +22,7 @@ export default function Home() {
       for (let i = 1; i < 4; i++) draft.categories.push({ title: `Category${i}`, products: [] });
     });
 
-    Axios.get("/products/").then((response) => {
+    Axios.get("/products/", { cancelToken: cancelRequest.token }).then((response) => {
       setState((draft) => {
         for (let i = 0; i < 3; i++) {
           draft.categories[i].products = response.data;

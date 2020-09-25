@@ -26,6 +26,11 @@ export default function Promo(props) {
       for (let i = 0; i < 3; i++) draft.promo.push(promo[i]);
       draft.isLoading = false;
     });
+
+    // cancel slider timeout on component unmount
+    return () => {
+      clearTimeout(timeout.current);
+    };
     // eslint-disable-next-line
   }, []);
 

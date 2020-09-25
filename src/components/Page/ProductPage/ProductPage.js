@@ -24,13 +24,27 @@ export default function ProductPage() {
     const cancelRequest = Axios.CancelToken.source();
 
     async function getProductData() {
-      let products = await Axios.get("/products/");
-      let reviews = await Axios.get(`/reviews/${products.data[id - 1].id}`);
-      setState((draft) => {
-        draft.productData = products.data[id - 1];
-        draft.reviews = reviews.data;
-        draft.isLoading = false;
-      });
+      try {
+        let products = await Axios.get("/products/", { cancelToken: cancelRequest.token });
+
+        // simple check if such product exists
+        if (id > products.data.length || isNaN(id)) {
+          setState((draft) => {
+            draft.notFound = true;
+          });
+          return;
+        }
+
+        // ret reviews and save everything
+        let reviews = await Axios.get(`/reviews/${products.data[id - 1].id}`, { cancelToken: cancelRequest.token });
+        setState((draft) => {
+          draft.productData = products.data[id - 1];
+          draft.reviews = reviews.data;
+          draft.isLoading = false;
+        });
+      } catch (error) {
+        console.log(error);
+      }
     }
     getProductData();
 
@@ -40,7 +54,7 @@ export default function ProductPage() {
     // eslint-disable-next-line
   }, [id]);
 
-  // function to add a newly created review
+  // function to add a newly created review. Passed down in AddReview component
   function addNewReview(review) {
     setState((draft) => {
       draft.reviews.unshift(review);
