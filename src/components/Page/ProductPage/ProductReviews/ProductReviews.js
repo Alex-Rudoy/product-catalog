@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
+import StateContext from "../../../../reducer/StateContext";
 import AddReview from "./AddReview/AddReview";
 import Review from "./Review/Review";
 
 export default function ProductReviews({ reviews }) {
-  const appState = useContext();
+  const appState = useContext(StateContext);
 
   return (
     <section className="product-reviews">
