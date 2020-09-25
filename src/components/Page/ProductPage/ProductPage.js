@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useImmer } from "use-immer";
 import LoadingIcon from "../../LoadingIcon/LoadingIcon";
+import Error404 from "../Error404/Error404";
 import Page from "../Page";
 import ProductDescription from "./ProductDescription/ProductDescription";
 import ProductReviews from "./ProductReviews/ProductReviews";
@@ -10,7 +11,7 @@ import ProductReviews from "./ProductReviews/ProductReviews";
 export default function ProductPage() {
   const [state, setState] = useImmer({
     isLoading: true,
-    productData: { id: "", img: "", text: "", title: "" },
+    notFound: false,
     reviews: [],
   });
   const { id } = useParams();
@@ -45,6 +46,8 @@ export default function ProductPage() {
       draft.reviews.unshift(review);
     });
   }
+
+  if (state.notFound) return <Error404 />;
 
   if (state.isLoading)
     return (

@@ -8,6 +8,7 @@ import Register from "./components/AuthModal/Register/Register";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LoadingIcon from "./components/LoadingIcon/LoadingIcon";
+import Error404 from "./components/Page/Error404/Error404";
 import Home from "./components/Page/Home/Home";
 import ProductPage from "./components/Page/ProductPage/ProductPage";
 import "./main.scss";
@@ -60,7 +61,7 @@ function Main() {
                   </Route>
                   {/*fallback route*/}
                   <Route>
-                    <Home />
+                    <Error404 />
                   </Route>
                 </Switch>
               </Suspense>
