@@ -2,7 +2,6 @@
 
 .input-container {
   position: relative;
-  margin-bottom: 40px;
   width: 100%;
 
   & label {
@@ -10,6 +9,7 @@
     top: 0;
     left: 10px;
     transition: all 0.3s ease-out;
+    transform-origin: left;
   }
 
   & input {
@@ -30,23 +30,23 @@
 
     &:focus + label {
       top: -18px;
-      left: -7px;
+      left: 0;
       transform: scale(0.7);
     }
 
     &:valid + label {
       top: -18px;
-      left: -7px;
+      left: 0;
       transform: scale(0.7);
     }
   }
 
   & textarea {
     background-color: transparent;
-    color: white;
+    color: $primarydark;
     width: 100%;
     border: none;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid $primarylight;
     resize: none;
     outline: none;
 
@@ -55,18 +55,18 @@
     }
 
     &:focus {
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid $primarydark;
     }
 
     &:focus + label {
       top: -18px;
-      left: -16px;
+      left: 0;
       transform: scale(0.7);
     }
 
     &:valid + label {
       top: -18px;
-      left: -16px;
+      left: 0;
       transform: scale(0.7);
     }
   }
