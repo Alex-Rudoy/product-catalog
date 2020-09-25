@@ -2,6 +2,7 @@ import Axios from "axios";
 import React, { useContext } from "react";
 import { useImmer } from "use-immer";
 import StateContext from "../../../../../reducer/StateContext";
+import Button from "../../../../_reusable/Button/Button";
 import Input from "../../../../_reusable/Input/Input";
 import AddReviewStars from "./AddReviewStars/AddReviewStars";
 
@@ -35,9 +36,7 @@ export default function AddReview({ productId }) {
     <div className="add-review">
       <AddReviewStars />
       <Input name="text" label="Review" type="textarea" value={state.text} onChange={changeHandler} />
-      <div className="submit-button" onClick={submitHandler}>
-        Save review
-      </div>
+      <Button type="primary-blue" size="small" text="Add review" onClick={submitHandler} />
     </div>
   );
 }
