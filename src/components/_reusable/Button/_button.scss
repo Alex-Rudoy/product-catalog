@@ -5,6 +5,7 @@
   cursor: pointer;
   transition: 0.3s;
   border: none;
+  margin: 0 8px;
 
   &--small {
     width: 100px;
@@ -25,7 +26,6 @@
 
   &--primary {
     background-color: $secondary;
-    margin-right: 16px;
     color: $primary;
   }
 

@@ -5,7 +5,6 @@ export default function ReviewRating({ rate }) {
   for (let i = 0; i < 5; i++) {
     stars.push(i < rate);
   }
-  console.log(stars);
 
   return (
     <div className="review-rating">
