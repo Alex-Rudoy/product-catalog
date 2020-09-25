@@ -1,0 +1,23 @@
+@import "../../../../../mixins";
+
+.reviews-auth {
+  background-color: $primary;
+  border-radius: 10px;
+  padding: 16px;
+  @include flexCenter;
+  color: white;
+
+  & textarea {
+    margin-bottom: 16px;
+  }
+
+  & .submit-button {
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: $primary;
+    color: white;
+    font-weight: bold;
+    @include flexCenter;
+  }
+}

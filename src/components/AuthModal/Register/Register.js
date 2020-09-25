@@ -2,6 +2,7 @@ import Axios from "axios";
 import React, { useContext } from "react";
 import { useImmer } from "use-immer";
 import DispatchContext from "../../../reducer/DispatchContext";
+import Button from "../../_reusable/Button/Button";
 import Input from "../../_reusable/Input/Input";
 import AuthModal from "../AuthModal";
 
@@ -49,9 +50,7 @@ export default function Register() {
     <AuthModal tab="register">
       <Input name="username" label="Username" type="input" value={state.login} onChange={changeHandler} />
       <Input name="password" label="Password" type="password" value={state.password} onChange={changeHandler} />
-      <div className="submit-button" onClick={submitHandler}>
-        Register
-      </div>
+      <Button type="primary-blue" size="large" onClick={submitHandler} text="Register" />
       {state.error ? <p className="error-message">{state.errorMessage}</p> : ""}
     </AuthModal>
   );

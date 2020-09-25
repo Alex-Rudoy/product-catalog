@@ -1,0 +1,42 @@
+@import "../../../mixins";
+
+.button {
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  margin: 0 8px;
+
+  &--small {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &--large {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  &--primary {
+    background-color: $secondary;
+    color: $primary;
+  }
+
+  &--primary-blue {
+    background-color: $primary;
+    color: white;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 2px solid $secondary;
+    color: $secondary;
+  }
+}

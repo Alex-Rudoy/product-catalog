@@ -11,19 +11,6 @@
     font-weight: 700;
   }
 
-  &__avatar {
-    margin: 0 8px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-
-    & img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
   &__arrow {
     box-sizing: initial;
     border-top: 12px solid white;
