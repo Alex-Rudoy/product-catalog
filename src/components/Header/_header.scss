@@ -23,6 +23,10 @@ header {
   & .button {
     width: 80px;
 
+    @include atMedium {
+      width: 100px;
+    }
+
     &:last-child {
       display: none;
 
