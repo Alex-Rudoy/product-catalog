@@ -4,12 +4,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 24px 0;
+  margin-bottom: 18px;
 
   @include atMedium {
     margin-right: auto;
     margin-left: auto;
     width: 750px;
+    margin-top: 24px;
   }
 
   @include atLarge {
@@ -17,8 +18,7 @@
   }
 
   &__slide {
-    width: 1120px;
-    height: 500px;
+    width: 100%;
     position: relative;
     overflow: hidden;
 
@@ -32,6 +32,10 @@
       height: 150px;
       background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.7) 50%);
     }
+
+    img {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -40,10 +44,15 @@
     left: 16px;
     color: white;
     z-index: 2;
+    font-size: 18px;
+
+    @include atMedium {
+      font-size: 24px;
+    }
   }
 
   &__nav {
-    height: 20px;
+    height: 30px;
     margin: 16px auto 0;
     display: flex;
     position: relative;
@@ -52,6 +61,8 @@
   &__slider-step {
     width: 30px;
     height: 30px;
+    cursor: pointer;
+    @include flexCenter;
 
     & div {
       width: 10px;
