@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useImmer } from "use-immer";
 import LoadingIcon from "../../LoadingIcon/LoadingIcon";
 import Page from "../Page";
-import CategoryItems from "./CategoryItems/CategoryItems";
+import PopularCategories from "./PopularCategories/PopularCategories";
 import Promo from "./Promo/Promo";
 
 export default function Home() {
