@@ -9,6 +9,11 @@
   &__username {
     color: white;
     font-weight: 700;
+    display: none;
+
+    @include atMedium {
+      display: inline;
+    }
   }
 
   &__arrow {
