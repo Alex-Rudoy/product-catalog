@@ -33,13 +33,17 @@
   }
 
   &__title {
-    margin: 0px 32px;
+    margin: 0px 32px 8px;
+
+    @include atLarge {
+      margin-bottom: 0;
+    }
   }
 
   & img {
     margin-right: 16px;
 
-    @include atMedium {
+    @include atLarge {
       filter: grayscale(0.7);
       transition: filter 0.3s;
 
@@ -54,6 +58,14 @@
 
     &:last-child img {
       margin-right: 0;
+    }
+  }
+
+  p {
+    text-align: center;
+
+    @include atMedium {
+      text-align: left;
     }
   }
 }
