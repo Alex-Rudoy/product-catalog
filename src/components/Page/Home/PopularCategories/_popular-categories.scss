@@ -1,0 +1,29 @@
+@import "../../../../mixins";
+
+.popular-categories {
+  background-color: $secondarylight;
+  padding: 24px 0;
+
+  & h1 {
+    color: $primary;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 32px;
+
+    @include atMedium {
+      font-size: 40px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include atLarge {
+      margin-right: auto;
+      margin-left: auto;
+      width: 1120px;
+    }
+  }
+}

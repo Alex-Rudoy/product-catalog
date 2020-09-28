@@ -1,13 +1,16 @@
 @import "./components/_reusable/Avatar/avatar";
-@import "./components/_reusable/Input/input";
 @import "./components/_reusable/Button/button";
+@import "./components/_reusable/Input/input";
+@import "./components/_reusable/ProductCard/product-card";
 @import "./components/AuthModal/auth-modal";
 @import "./components/AuthModal/AuthModalTab/auth-modal-tab";
 @import "./components/Footer/footer";
 @import "./components/Header/header";
 @import "./components/Header/HeaderLoggedIn/header-logged-in";
 @import "./components/LoadingIcon/loading-icon";
-@import "./components/Page/Home/CategoryItems/category-items";
+@import "./components/Page/Error404/error404";
+@import "./components/Page/Home/PopularCategories/CategoryCarousel/category-carousel";
+@import "./components/Page/Home/PopularCategories/popular-categories";
 @import "./components/Page/Home/Promo/promo";
 @import "./components/Page/ProductPage/ProductDescription/product-description";
 @import "./components/Page/ProductPage/ProductReviews/AddReview/add-review";
@@ -16,8 +19,6 @@
 @import "./components/Page/ProductPage/ProductReviews/Review/review";
 @import "./components/Page/ProductPage/ProductReviews/Review/ReviewRating/review-rating";
 @import "./components/Page/ProductPage/ProductReviews/ReviewsAuth/reviews-auth";
-@import "./components/Page/Error404/error404";
-@import "./components/_reusable/ProductCard/product-card";
 
 * {
   margin: 0px;
