@@ -1,0 +1,36 @@
+@import "../../../mixins";
+
+.category-page {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    color: $primary;
+    margin: 16px 0 24px;
+    text-align: center;
+    font-size: 32px;
+
+    @include atMedium {
+      font-size: 40px;
+    }
+  }
+
+  &__products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: center;
+    gap: 24px;
+    padding: 0 16px 24px;
+
+    @include atMedium {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 750px;
+      padding: 0 0 24px;
+    }
+
+    @include atLarge {
+      max-width: 1120px;
+    }
+  }
+}
