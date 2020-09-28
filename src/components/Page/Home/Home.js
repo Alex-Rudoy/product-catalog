@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useImmer } from "use-immer";
 import LoadingIcon from "../../LoadingIcon/LoadingIcon";
 import Page from "../Page";
-import CategoryItems from "./CategoryItems/CategoryItems";
+import PopularCategories from "./PopularCategories/PopularCategories";
 import Promo from "./Promo/Promo";
 
 export default function Home() {
@@ -47,14 +47,7 @@ export default function Home() {
   return (
     <Page title="Homepage">
       <Promo />
-      <section className="category-items">
-        <div className="category-items__wrapper">
-          <h1>Our most popular categories</h1>
-          {state.categories.map((category) => (
-            <CategoryItems data={category} key={category.title} />
-          ))}
-        </div>
-      </section>
+      <PopularCategories categories={state.categories} />
     </Page>
   );
 }

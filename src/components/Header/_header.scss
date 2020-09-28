@@ -13,5 +13,26 @@ header {
 
   & h1 {
     color: white;
+    font-size: 24px;
+
+    @include atMedium {
+      font-size: 32px;
+    }
+  }
+
+  & .button {
+    width: 80px;
+
+    @include atMedium {
+      width: 100px;
+    }
+
+    &:last-child {
+      display: none;
+
+      @include atMedium {
+        display: inline-block;
+      }
+    }
   }
 }

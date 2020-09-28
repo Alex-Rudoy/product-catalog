@@ -1,0 +1,70 @@
+@import "../../../../../mixins";
+
+.category-carousel {
+  width: 100%;
+
+  &__title {
+    font-weight: bold;
+    color: $primarydark;
+    margin-bottom: 16px;
+    margin-left: 16px;
+
+    @include atLarge {
+      margin-left: 0;
+    }
+  }
+
+  &__scrollable {
+    padding: 16px 16px 32px;
+    overflow-x: scroll;
+
+    -ms-overflow-style: none; /* IE / Edge */
+    scrollbar-width: none; /* FF */
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome */
+    }
+
+    @include atLarge {
+      overflow-x: visible;
+      padding-left: 0;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    width: min-content;
+  }
+
+  &__view-all {
+    width: 200px;
+    height: 245px;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    padding: 40px 16px;
+    box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 10px;
+    margin-right: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    & h3 {
+      text-align: center;
+    }
+  }
+
+  &__dots {
+    display: flex;
+
+    & div {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $primary;
+      margin: 5px 5px;
+      transition: background-color 0.3s;
+    }
+  }
+}

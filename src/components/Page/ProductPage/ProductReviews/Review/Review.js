@@ -16,8 +16,10 @@ export default function Review({
     <div className="review">
       <div className="review__top-line">
         <Avatar />
-        <p className="review__author">{author}</p>
-        <p className="review__date">{date}</p>
+        <div>
+          <p className="review__author">{author}</p>
+          <p className="review__date">{date}</p>
+        </div>
       </div>
       <ReviewRating rate={rate} />
       <p className="review__text">{text}</p>
