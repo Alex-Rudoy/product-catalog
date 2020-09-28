@@ -44,7 +44,7 @@
     padding: 40px 16px;
     box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 10px;
     margin-right: 16px;
-
+    transition: box-shadow 0.3s, transform 0.3s;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -52,6 +52,11 @@
 
     & h3 {
       text-align: center;
+    }
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.25) 8px 8px 15px;
+      transform: scale(1.1);
     }
   }
 

@@ -22,14 +22,18 @@ export default function Home() {
       for (let i = 1; i < 4; i++) draft.categories.push({ title: `Category${i}`, products: [] });
     });
 
-    Axios.get("/products/", { cancelToken: cancelRequest.token }).then((response) => {
-      setState((draft) => {
-        for (let i = 0; i < 3; i++) {
-          draft.categories[i].products = response.data;
-        }
-        draft.isLoading = false;
+    Axios.get("/products/", { cancelToken: cancelRequest.token })
+      .then((response) => {
+        setState((draft) => {
+          for (let i = 0; i < 3; i++) {
+            draft.categories[i].products = response.data;
+          }
+          draft.isLoading = false;
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    });
 
     return () => {
       cancelRequest.cancel();
